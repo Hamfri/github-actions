@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: echo a string
-        run: echo "Test action"
+        run: eccho "Test action"
       - name: multiline script
         run: |
           node -v
