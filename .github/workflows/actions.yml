@@ -7,9 +7,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: List files
-        run:  |
+        run: |
           pwd
           ls -al
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          echo "${{ Github.token }}"
+          # git clone git@github:$GITHUB_REPOSITORY
+          # git checkout $GITHUB_SHA
       - name: Simple js Action
         id: greet
         uses: actions/hello-world-javascript-action@v1
