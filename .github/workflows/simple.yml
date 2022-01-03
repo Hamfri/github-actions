@@ -5,8 +5,13 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: echo a string
-        run: eccho "Test action"
+        run: echo "Test action"
       - name: multiline script
         run: |
           node -v
           npm -v
+      - name: python command
+        run: |
+          import platform
+          (platform.processor())
+        shell: python
